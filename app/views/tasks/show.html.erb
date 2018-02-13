@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+
+<div class="container-show">
+  <p class="task-detail"><%= @task.details %></p>
+    <div class="task-div">
+      <input type="checkbox" id="checkbox" name="interest" value="task" <%= "checked" if @task.completed%>>
+      <label for="checkbox"><%= task_adapted %></label>
+    </div>
+</div>
+
+<button type="button" class="btn btn-outline-danger"><%= link_to "Edit this task", edit_task_path(@task), class: "link" %></button>
